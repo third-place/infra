@@ -16,7 +16,6 @@ spec:
         - backstage.thirdplaceapp.com
         - bs.thirdplaceapp.com
       secretName: thirdplace-com-cert-tls
-#      secretName: thirdplace-com-letsencrypt-prod
   rules:
     - host: bs.thirdplaceapp.com
       http:

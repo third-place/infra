@@ -10,9 +10,9 @@ spec:
   commonName: thirdplace.com
   # DNS SAN
   dnsNames:
-    - thirdplace.com
-    - api.thirdplace.com
-    - bs.thirdplace.com
+    - thirdplaceapp.com
+    - api.thirdplaceapp.com
+    - backstage.thirdplaceapp.com
   # Duration of the certificate
   duration: 8760h
   # Renew 8 hours before the certificate expiration
