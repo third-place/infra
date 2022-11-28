@@ -7,7 +7,7 @@ metadata:
     - yaml
     - k8s
   links:
-    - url: https://github.com/danielmunro/otto-infra
+    - url: https://github.com/third-place/infra
       title: Git Repository
 spec:
   type: service
@@ -27,3 +27,4 @@ spec:
     - api:user-service
     - api:community-service
     - api:image-service
+    - api:notification-service
