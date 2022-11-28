@@ -13,6 +13,7 @@ spec:
     - hosts:
         - thirdplaceapp.com
         - api.thirdplaceapp.com
+        - backstage.thirdplaceapp.com
       secretName: thirdplace-com-cert-tls
   rules:
     - host: backstage.thirdplaceapp.com
