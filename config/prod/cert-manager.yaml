@@ -12,7 +12,7 @@ spec:
   dnsNames:
     - thirdplace.com
     - api.thirdplace.com
-    - backstage.thirdplace.com
+    - bs.thirdplace.com
   # Duration of the certificate
   duration: 8760h
   # Renew 8 hours before the certificate expiration

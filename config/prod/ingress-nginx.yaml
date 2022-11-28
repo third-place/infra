@@ -14,10 +14,11 @@ spec:
         - thirdplaceapp.com
         - api.thirdplaceapp.com
         - backstage.thirdplaceapp.com
+        - bs.thirdplaceapp.com
       secretName: thirdplace-com-cert-tls
 #      secretName: thirdplace-com-letsencrypt-prod
   rules:
-    - host: backstage.thirdplaceapp.com
+    - host: bs.thirdplaceapp.com
       http:
         paths:
           - pathType: Prefix
