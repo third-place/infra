@@ -1,5 +1,6 @@
 set -e
 
+# apply all the secrets
 kubectl apply -f secrets/prod/dockerconfigjson.yaml
 kubectl apply -f secrets/prod/backstage.yaml
 kubectl apply -f secrets/prod/kafka.yaml
@@ -11,14 +12,17 @@ kubectl apply -f secrets/prod/cognito.yaml
 kubectl apply -f secrets/prod/aws.yaml
 kubectl apply -f secrets/prod/image_service.yaml
 
+# ingress
 helm install ingress-nginx ingress-nginx/ingress-nginx
 
+# cert manager for SSL
 helm install \
   cert-manager jetstack/cert-manager \
   --namespace cert-manager \
   --create-namespace \
   --set global.leaderElection.namespace=cert-manager
 
+# bootstrap fluxCD
 flux check --pre
 
 flux bootstrap github \
@@ -27,3 +31,16 @@ flux bootstrap github \
   --branch=main \
   --path=./clusters/prod \
   --personal
+
+# Prometheus setup
+
+# Privileges -- only for GKE/prometheus
+# (see: https://devopscube.com/setup-prometheus-monitoring-on-kubernetes/)
+ACCOUNT=$(gcloud info --format='value(config.account)')
+kubectl create clusterrolebinding owner-cluster-admin-binding \
+    --clusterrole cluster-admin \
+    --user $ACCOUNT
+
+kubectl create namespace monitoring
+kubectl create -f config/prod/cluster-role.yaml
+kubectl create -f config/prod/prometheus-config-map.yaml
