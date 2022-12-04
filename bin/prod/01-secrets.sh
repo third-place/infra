@@ -11,4 +11,4 @@ kubectl apply -f secrets/prod/postgres-image.yaml
 kubectl apply -f secrets/prod/postgres-notification.yaml
 kubectl apply -f secrets/prod/cognito.yaml
 kubectl apply -f secrets/prod/aws.yaml
-kubectl apply -f secrets/prod/image_service.yaml
+kubectl apply -f secrets/prod/image-service.yaml
