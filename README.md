@@ -6,7 +6,7 @@ Production prerequisites: `helm`, `kubectl`, `flux`
 
 ## Cluster Setup 
 
-Check out [this guide](https://github.com/Neutrollized/free-tier-gke) to find the the right kubernetes deployment for your budget.
+Check out [this guide](https://github.com/Neutrollized/free-tier-gke) to find the right kubernetes deployment for your budget.
 
 ## Executables
 
