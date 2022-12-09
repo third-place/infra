@@ -18,5 +18,6 @@ Inside `secrets/{dev/prod}` are a collection of template files. Each template ne
 
 ## Todo
 
-* Automate databases with terraform
+* Postgres databases are automated with terraform
+* Kafka clusters are automated with terraform
 * Secrets setup & management
