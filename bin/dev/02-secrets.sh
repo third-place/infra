@@ -10,3 +10,4 @@ kubectl apply -f secrets/dev/postgres-notification.yaml
 kubectl apply -f secrets/dev/cognito.yaml
 kubectl apply -f secrets/dev/aws.yaml
 kubectl apply -f secrets/dev/image-service.yaml
+kubectl apply -f secrets/dev/user-service.yaml
