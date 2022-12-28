@@ -114,6 +114,13 @@ spec:
                 port:
                   number: 8080
           - pathType: Prefix
+            path: "/users"
+            backend:
+              service:
+                name: user-service
+                port:
+                  number: 8080
+          - pathType: Prefix
             path: "/otp"
             backend:
               service:
